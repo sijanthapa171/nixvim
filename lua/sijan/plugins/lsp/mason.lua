@@ -34,10 +34,12 @@ return {
         "svelte",
         "lua_ls",
         "graphql",
+        "clangd",
         "emmet_ls",
         "prismals",
         "pyright",
       },
+      automatic_installation = true, -- auto install
     })
 
     mason_tool_installer.setup({
