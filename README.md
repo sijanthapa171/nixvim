@@ -4,13 +4,13 @@
 
 ## Run
 ```Nix
-nix run github:Sly-Harvey/nixvim
+nix run github:thapasijan17/nixvim
 ```
 
 ## Install on NixOS
 ### Add this to your flake.nix
 ```Nix
-nixvim.url = "github:Sly-Harvey/nixvim";
+nixvim.url = "github:thapasijan17/nixvim";
 ```
 ### Then in your home-manager configuration add this
 ```Nix
