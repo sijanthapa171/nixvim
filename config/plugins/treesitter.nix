@@ -8,7 +8,6 @@
       folding = false;
       grammarPackages = with pkgs.vimPlugins.nvim-treesitter.builtGrammars; [
         nix
-        org
         bash
         cmake
         make

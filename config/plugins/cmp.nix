@@ -29,18 +29,20 @@
         };
         window = {
           completion = {
+            # border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
             border = "rounded";
             winhighlight = "Normal:Normal,FloatBorder:FloatBorder,CursorLine:Visual,Search:None";
           };
           documentation = {
+            # border = [ "╭" "─" "╮" "│" "╯" "─" "╰" "│" ];
             border = "rounded";
           };
         };
         sources = [
           {name = "nvim_lsp";}
-          {name = "nvim_lua";}
           {name = "luasnip";}
           {name = "buffer";}
+          {name = "nvim_lua";}
           {name = "path";}
           {name = "crates";}
         ];
@@ -51,6 +53,9 @@
           "<C-Space>" = "cmp.mapping.complete()";
           "<C-j>" = "cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select })";
           "<C-k>" = "cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select })";
+          "<C-n>" = "cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Select })";
+          "<C-p>" = "cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Select })";
+          "<C-e>" = "cmp.mapping.close()";
         };
       };
     };
