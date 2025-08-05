@@ -64,7 +64,7 @@
     stylua
     # Debuggers / misc deps
     asm-lsp
-    bashdb
+    # bashdb
     # clang-tools
     delve
     fd
