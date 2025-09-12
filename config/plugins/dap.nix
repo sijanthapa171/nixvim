@@ -135,7 +135,7 @@
       }
       dap.adapters.lldb = {
           type = 'executable',
-          command = '${pkgs.stable.lldb}/bin/lldb-dap', -- adjust as needed, must be absolute path
+          command = '${pkgs.lldb}/bin/lldb-dap', -- adjust as needed, must be absolute path
           name = 'lldb'
       }
 
@@ -143,7 +143,7 @@
         type = 'server',
         port = "''${port}",
         executable = {
-          command = '${pkgs.stable.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb',
+          command = '${pkgs.vscode-extensions.vadimcn.vscode-lldb}/share/vscode/extensions/vadimcn.vscode-lldb/adapter/codelldb',
           args = {"--port", "''${port}"},
 
           -- On windows you may have to uncomment this:

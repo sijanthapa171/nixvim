@@ -5,7 +5,7 @@
     "large_buf" = {clear = true;};
     "close-with-q" = {clear = true;};
     "auto_open_nvimtree" = {clear = true;};
-    "alpha_autostart" = {clear = true;};
+    # "alpha_autostart" = {clear = true;};
     "wrap_spell" = {clear = true;};
     "terminal_settings" = {clear = true;};
     "UserLspConfig" = {};
@@ -76,32 +76,32 @@
         '';
       };
     }
-    {
-      event = "VimEnter";
-      group = "alpha_autostart";
-      callback = {
-        __raw = ''
-          function()
-            local should_skip
-            if
-                vim.fn.argc() > 0
-            then
-              vim.cmd("wincmd l")
-              vim.cmd("wincmd k")
-              should_skip = true
-            else
-              for _, arg in pairs(vim.v.argv) do
-                if arg == "-b" or arg == "-c" or vim.startswith(arg, "+") or arg == "-S" then
-                  should_skip = true
-                  break
-                end
-              end
-            end
-            if should_skip then return end
-          end
-        '';
-      };
-    }
+    # {
+    #   event = "VimEnter";
+    #   group = "alpha_autostart";
+    #   callback = {
+    #     __raw = ''
+    #       function()
+    #         local should_skip
+    #         if
+    #             vim.fn.argc() > 0
+    #         then
+    #           vim.cmd("wincmd l")
+    #           vim.cmd("wincmd k")
+    #           should_skip = true
+    #         else
+    #           for _, arg in pairs(vim.v.argv) do
+    #             if arg == "-b" or arg == "-c" or vim.startswith(arg, "+") or arg == "-S" then
+    #               should_skip = true
+    #               break
+    #             end
+    #           end
+    #         end
+    #         if should_skip then return end
+    #       end
+    #     '';
+    #   };
+    # }
     {
       event = "VimEnter";
       group = "auto_open_nvimtree";

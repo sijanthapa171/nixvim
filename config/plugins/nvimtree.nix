@@ -9,28 +9,28 @@
       };
     }
   ];
-  plugins = {
-    nvim-tree = {
-      enable = true;
+  plugins.nvim-tree = {
+    enable = true;
+    settings = {
       # autoClose = false;
       # openOnSetup = true;
 
-      syncRootWithCwd = false;
-      respectBufCwd = false;
-      updateFocusedFile = {
+      sync_root_with_cwd = true;
+      respect_buf_cwd = true;
+      update_focused_file = {
         enable = true;
-        updateRoot = true;
+        update_root = true;
       };
       git.enable = true;
       actions = {
-        openFile.quitOnOpen = true;
+        open_file.quit_on_open = true;
       };
       view = {
         side = "left";
         signcolumn = "no";
-        preserveWindowProportions = true;
+        preserve_window_proportions = true;
         float = {
-          openWinConfig = {
+          open_win_config = {
             col = 1;
             row = 1;
             relative = "editor";

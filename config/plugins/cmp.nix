@@ -1,12 +1,12 @@
 {
   plugins = {
     luasnip.enable = true;
-    cmp-nvim-lsp = {enable = true;}; # lsp
-    cmp-nvim-lua = {enable = true;};
-    cmp-buffer = {enable = true;};
-    cmp-path = {enable = true;};
-    cmp_luasnip = {enable = true;};
-    cmp-cmdline = {enable = false;};
+    cmp-nvim-lsp.enable = true; # lsp
+    cmp-nvim-lua.enable = true;
+    cmp-buffer.enable = true;
+    cmp-path.enable = true;
+    cmp_luasnip.enable = true;
+    cmp-cmdline.enable = false;
     nix.enable = true;
     cmp = {
       enable = true;

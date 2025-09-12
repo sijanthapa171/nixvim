@@ -15,7 +15,7 @@
     ./lsp.nix
     ./lualine.nix
     ./lint.nix
-    ./markdown-preview.nix
+    ./markdown.nix
     ./noice.nix
     ./nvimtree.nix
     # ./presence.nix
