@@ -7,6 +7,14 @@
   ];
   viAlias = true;
   vimAlias = true;
+  # Shim: some configs/modules still use `require('project_nvim')`.
+  # Nixvim uses `require('project')`. Map the old name to the new one.
+  extraConfigLuaPre = ''
+    local ok, project = pcall(require, 'project')
+    if ok and project then
+      package.preload['project_nvim'] = function() return require('project') end
+    end
+  '';
   clipboard = {
     register = "unnamedplus";
     providers = {
