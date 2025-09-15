@@ -124,7 +124,7 @@
       }
       {
         type = "text";
-        val = "Better than neovim.";
+        val = "Better than neovim. Keymaps for SPC + SK";
         opts = {
           position = "center";
           # hl = "Keyword";
