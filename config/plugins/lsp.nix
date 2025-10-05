@@ -29,7 +29,7 @@
         gopls.enable = true;
         jsonls.enable = true;
         ts_ls.enable = true;
-        html.enable = true;
+        # html.enable = true;
         # volar.enable = true;
         # terraformls = {enable = true;};
         # ansiblels.enable = true;

@@ -25,7 +25,7 @@
         json = ["prettier"];
         lua = ["stylua"];
         markdown = ["prettier"];
-        nix = ["alejandra"];
+        nix = ["nixfmt"];
         python = ["isort" "black"];
         rust = ["rustfmt"];
         sh = ["shfmt"];
