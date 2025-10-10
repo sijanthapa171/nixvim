@@ -346,6 +346,72 @@ Minimalist statusline with:
 - Shows current file and project in Discord
 - Custom plugin build from specific commit
 
+### WakaTime — time tracking for your coding
+
+This configuration includes the WakaTime plugin and installs the `wakatime-cli` so Neovim can report editing activity to your WakaTime account.
+
+Where to put your API key
+
+- Option A — `~/.wakatime.cfg` (recommended)
+  1. Create `~/.wakatime` directory if it doesn't exist and open the config file (you already edited `~/.wakatime/wakatime-internal.cfg`):
+
+     ```bash
+     mkdir -p ~/.wakatime
+     nvim ~/.wakatime/wakatime.cfg
+     ```
+
+  2. Add your API key in the file in this format:
+
+     ```ini
+     [settings]
+     api_key = YOUR_API_KEY_HERE
+     ```
+
+- Option B — environment variable (useful for ephemeral environments / CI)
+
+  Export your key in your shell profile (`~/.profile`, `~/.zshenv`, or your systemd/user unit):
+
+  ```bash
+  export WAKATIME_API_KEY=your_api_key_here
+  ```
+
+  If you use `direnv` or other environment managers, make sure the variable is loaded into your Neovim environment.
+
+Enabling and verifying in this Nix setup
+
+- The plugin module is `config/plugins/wakatime.nix` and is imported by `config/plugins/default.nix`.
+- The CLI is added to `extraPackages` in `config/default.nix` as `wakatime-cli`. Rebuild/activate your Home Manager or system configuration so the binary becomes available:
+
+```bash
+# If using home-manager with flakes
+nix run .#homeConfigurations.$(hostname)-x86_64-linux.activationPackage -- show
+# Or rebuild your system / user config as appropriate (example):
+# home-manager switch
+```
+
+Quick test
+
+- Open Neovim and edit a file. The plugin should call the CLI and create/update `~/.wakatime/wakatime.db` and `~/.wakatime/wakatime.log`.
+- You can run the CLI manually to verify it can reach the API:
+
+```bash
+wakatime --version
+wakatime --logfile ~/.wakatime/wakatime.log --status
+```
+
+Troubleshooting
+
+- If nothing appears in your WakaTime dashboard:
+  - Verify the API key (no extra spaces/newlines) in `~/.wakatime/wakatime.cfg` or `WAKATIME_API_KEY`.
+  - Check `~/.wakatime/wakatime.log` for errors.
+  - Ensure the `wakatime-cli` binary is in PATH (rebuild your Nix/home-manager if necessary).
+  - If Neovim runs in a different environment (GUI, systemd unit, or as a different user), make sure the environment variable or config file is reachable by that process.
+
+Security note
+
+- Treat your WakaTime API key like a secret. Prefer storing it in `~/.wakatime/wakatime.cfg` with file permissions set to user-only (chmod 600), or inject via secure environment mechanisms.
+
+
 ## Key Mappings
 
 ### Global Leader: `<Space>`

@@ -73,6 +73,7 @@
     # lldb_17
     llvmPackages_17.bintools-unwrapped
     marksman
+  wakatime-cli
     # Linters
     commitlint
     # eslint_d
