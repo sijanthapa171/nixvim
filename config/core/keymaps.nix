@@ -102,6 +102,73 @@
         desc = "Delete buffer";
       };
     }
+    {
+      mode = "n";
+      key = "gt";
+      action = "<CMD>tabnext<CR>";
+      options = { desc = "Next tab"; };
+    }
+    {
+      mode = "n";
+      key = "gT";
+      action = "<CMD>tabprevious<CR>";
+      options = { desc = "Previous tab"; };
+    }
+
+    {
+      mode = "n";
+      key = "<leader>1";
+      action = "<CMD>tabn 1<CR>";
+      options = { desc = "Go to tab 1"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>2";
+      action = "<CMD>tabn 2<CR>";
+      options = { desc = "Go to tab 2"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>3";
+      action = "<CMD>tabn 3<CR>";
+      options = { desc = "Go to tab 3"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>4";
+      action = "<CMD>tabn 4<CR>";
+      options = { desc = "Go to tab 4"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>5";
+      action = "<CMD>tabn 5<CR>";
+      options = { desc = "Go to tab 5"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>6";
+      action = "<CMD>tabn 6<CR>";
+      options = { desc = "Go to tab 6"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>7";
+      action = "<CMD>tabn 7<CR>";
+      options = { desc = "Go to tab 7"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>8";
+      action = "<CMD>tabn 8<CR>";
+      options = { desc = "Go to tab 8"; };
+    }
+    {
+      mode = "n";
+      key = "<leader>9";
+      action = "<CMD>tabn 9<CR>";
+      options = { desc = "Go to tab 9"; };
+    }
 
     # Move text up and down
     {
