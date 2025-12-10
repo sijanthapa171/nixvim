@@ -1,6 +1,7 @@
+{ config, ... }:
 {
   colorschemes.catppuccin = {
-    enable = true;
+    enable = config.colorschemes.base16.enable != true;
     settings = {
       flavour = "mocha";
       background = {
@@ -31,10 +32,10 @@
             background = true;
           };
           underlines = {
-            errors = ["underline"];
-            hints = ["underline"];
-            information = ["underline"];
-            warnings = ["underline"];
+            errors = [ "underline" ];
+            hints = [ "underline" ];
+            information = [ "underline" ];
+            warnings = [ "underline" ];
           };
         };
       };
