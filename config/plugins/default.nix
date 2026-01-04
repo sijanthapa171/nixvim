@@ -19,6 +19,7 @@
     ./noice.nix
     ./nvimtree.nix
     ./presence.nix
+    ./present.nix
     ./statuscol.nix
     ./telescope.nix
     ./ufo.nix
