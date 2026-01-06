@@ -26,6 +26,6 @@
     ./project.nix
     ./toggleterm.nix
     ./treesitter.nix
-    ./wakatime.nix
+    # ./wakatime.nix
   ];
 }
