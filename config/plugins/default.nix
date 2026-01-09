@@ -18,14 +18,12 @@
     ./markdown.nix
     ./noice.nix
     ./nvimtree.nix
-    ./presence.nix
-    ./present.nix
+    # ./presence.nix
     ./statuscol.nix
     ./telescope.nix
     ./ufo.nix
     ./project.nix
-    ./toggleterm.nix
+    # ./toggleterm.nix
     ./treesitter.nix
-    # ./wakatime.nix
   ];
 }

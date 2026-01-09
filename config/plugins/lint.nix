@@ -2,8 +2,9 @@
   plugins.lint = {
     enable = true;
     lintersByFt = {
-      #text = [ "write_good" ];
-      markdownlint = ["markdownlint"];
+      # text = [ "write_good" ];
+      markdownlint = ["markdownlint" "vale"];
+      markdown = ["markdownlint"];
       c = ["clangtidy"];
       cpp = ["clangtidy"];
       # css = ["eslint_d"];

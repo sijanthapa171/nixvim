@@ -1,4 +1,5 @@
-{pkgs, ...}: {
+{ pkgs, ... }:
+{
   # Import all your configuration modules here
   imports = [
     ./core
@@ -49,14 +50,16 @@
     tmux-sessionizer
     # Formatters
     nixfmt
-    asmfmt
-    astyle
-    black
+    # asmfmt
+    # astyle
+    ruff
+    # black # Ruff replaces this
+    # isort # Ruff replaces this
+    # pylint
     cmake-format
-    gofumpt
-    golines
-    gotools
-    isort
+    # gofumpt
+    # golines
+    # gotools
     nodePackages.prettier
     prettierd
     rustfmt
@@ -67,25 +70,22 @@
     # bashdb
     # clang-tools
     delve
+    golangci-lint
     fd
     gdb
     go
     # lldb_17
-    llvmPackages_20.bintools-unwrapped
+    # llvmPackages.bintools-unwrapped
     marksman
-    wakatime-cli
     # Linters
     commitlint
     # eslint_d
-    golangci-lint
     hadolint
     # html-tidy
     luajitPackages.luacheck
     markdownlint-cli
-    pylint
-    ruff
     # shellcheck
-    vale
+    # vale
     yamllint
   ];
 }
