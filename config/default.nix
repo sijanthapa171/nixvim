@@ -27,7 +27,7 @@
     markdown-preview.enable = true;
     tmux-navigator.enable = true;
     zellij = {
-      enable = true;
+      enable = false;
       settings = {
         vimTmuxNavigatorKeybinds = true;
       };
@@ -42,7 +42,7 @@
     };
   };
   extraPlugins = with pkgs.vimPlugins; [
-    vim-be-good
+    # vim-be-good
     nui-nvim
   ];
   extraPackages = with pkgs; [
@@ -60,7 +60,7 @@
     # gofumpt
     # golines
     # gotools
-    nodePackages.prettier
+    prettier
     prettierd
     rustfmt
     shfmt

@@ -3,7 +3,8 @@
     enable = true;
     enableTelescope = true;
     settings = {
-      use_lsp = true;
+      lsp.enabled = true;
+      history.save_file = "projects_history.json";
       exclude_dirs = [
         "~/.local/*"
         "~/.cache/*"
@@ -22,13 +23,14 @@
         "meson.build"
         "PKGBUILD"
         "Cargo.toml"
+        "pyproject.toml"
         "package.json"
         "composer.json"
         "lazy-lock.json"
         "!>home"
         "!=tmp"
         ".git"
-        "*.sln"
+        ".sln"
         ".vs"
         ".vscode"
         ".hg"
