@@ -3,7 +3,15 @@
     enable = true;
     settings = {
       notify = {
-        enabled = false;
+        enabled = true;
+      };
+      popupmenu = {
+        enabled = true;
+        backend = "nui";
+      };
+      cmdline = {
+        enabled = true;
+        view = "cmdline"; # cmdline, cmdline_popup
       };
       messages = {
         enabled = true; # Adds a padding-bottom to neovim statusline when set to false for some reason (untested)
@@ -13,13 +21,9 @@
           enabled = true;
         };
         progress = {
-          enabled = false;
+          enabled = true;
           view = "mini";
         };
-      };
-      popupmenu = {
-        enabled = true;
-        backend = "nui";
       };
       format = {
         filter = {
