@@ -5,7 +5,7 @@
       #iconsEnabled = true;
       extensions = ["nvim-tree" "nvim-dap-ui" "toggleterm" "quickfix"];
       options = {
-        globalstatus = true;
+        globalstatus = false;
         disabled_filetypes = {
           statusline = ["dashboard" "alpha"];
         };
@@ -20,7 +20,7 @@
         };
       };
       sections.lualine_c = ["filename"];
-      sections.lualine_x = ["location"];
+      sections.lualine_x = ["encoding" "filetype"];
       tabline = {};
       winbar = {};
       inactive_winbar = {};
