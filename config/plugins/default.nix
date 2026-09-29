@@ -23,7 +23,7 @@
     ./telescope.nix
     ./ufo.nix
     ./project.nix
-    ./toggleterm.nix
+    # ./toggleterm.nix
     ./treesitter.nix
   ];
 }
