@@ -31,6 +31,7 @@
         sh = ["shfmt"];
         typescript = ["prettierd" "prettier"];
         typescriptreact = ["prettier"];
+        qml = ["qmlformat"];
         yaml = ["prettierd" "prettier"];
       };
       formatters = {
