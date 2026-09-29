@@ -1,7 +1,6 @@
-{ config, ... }:
 {
   colorschemes.catppuccin = {
-    enable = config.colorschemes.base16.enable != true;
+    enable = true;
     settings = {
       flavour = "mocha";
       background = {

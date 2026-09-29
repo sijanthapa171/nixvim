@@ -6,6 +6,8 @@
     ./themes
     ./plugins
   ];
+  nixpkgs.config.allowUnfree = true;
+
   viAlias = true;
   vimAlias = true;
   clipboard = {

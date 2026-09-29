@@ -1,7 +1,6 @@
-{ config, ... }:
 {
   colorschemes.kanagawa = {
-    enable = config.colorschemes.base16.enable != true;
+    enable = true;
     settings = {
       theme = "wave"; # wave, lotus, dragon, all
       transparent = false;

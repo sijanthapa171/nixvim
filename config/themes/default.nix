@@ -1,10 +1,12 @@
 {
   imports = [
     ./catppuccin.nix
-    # ./vague.nix
+    ./vague.nix
     # ./kanagawa.nix
+    # ./vscode.nix
+    # ./nord.nix
     # ./onedark.nix
-    # ./base16-radium.nix
+    # ./base16.nix
   ];
-  # config.extraConfigLua = ''vim.cmd("colorscheme catppuccin")'';
+  config.colorscheme = "catppuccin";
 }
