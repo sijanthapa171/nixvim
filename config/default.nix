@@ -17,6 +17,18 @@
   };
   globals.mapleader = " ";
 
+  performance = {
+    combinePlugins.enable = true;
+    byteCompileLua = {
+      enable = true;
+      initLua = true;
+      configs = true;
+      plugins = true;
+      nvimRuntime = false;
+      luaLib = false;
+    };
+  };
+
   # Misc plugins
   plugins = {
     persistence.enable = true;
