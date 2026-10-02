@@ -7,6 +7,7 @@
     cmp-path.enable = true;
     cmp_luasnip.enable = true;
     cmp-cmdline.enable = false;
+    copilot-cmp.enable = true;
     nix.enable = true;
     cmp = {
       enable = true;
@@ -39,12 +40,13 @@
           };
         };
         sources = [
+          {name = "copilot";}
           {name = "nvim_lsp";}
           {name = "luasnip";}
-          {name = "buffer";}
           {name = "nvim_lua";}
           {name = "path";}
           {name = "crates";}
+          {name = "buffer";}
         ];
         mapping = {
           "<Tab>" = "cmp.mapping.confirm({ select = true })";

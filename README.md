@@ -1,24 +1,41 @@
-# Nixvim
+# Nixvim Configuration
+
+A modern, feature-rich Neovim configuration built with [Nixvim](https://github.com/nix-community/nixvim) - a Nix-based Neovim configuration framework.
 
 ![Screenshot](./preview.png)
 
-## Run
-```Nix
+## Quick Start
+
+### Try it without installing
+```bash
 nix run github:sijanthapa171/nixvim
 ```
 
-## Install on NixOS
-### Add this to your flake.nix
-```Nix
-nixvim.url = "github:sijanthapa171/nixvim";
-```
-### Then in your home-manager configuration add this
-```Nix
-{ inputs, pkgs, ... }:
+### Install on NixOS
 
+#### 1. Add to your `flake.nix`
+```nix
 {
-    home.packages = with pkgs; [
-        inputs.nixvim.packages.${system}.default
-    ];
+  inputs = {
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixvim.url = "github:sijanthapa171/nixvim";
+  };
 }
 ```
+
+#### 2. Add to your Home Manager configuration
+```nix
+{ inputs, pkgs, system, ... }:
+{
+  home.packages = [
+    inputs.nixvim.packages.${system}.default
+  ];
+}
+```
+
+#### 3. Rebuild your system
+```bash
+nixos-rebuild switch --flake .#your-hostname
+# or for home-manager
+home-manager switch --flake .#your-user
+``
